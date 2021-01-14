@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 明朝体でよく使うフォントを読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+/* ゴシック体でよく使うフォントを読み込み */
+/* ノーマル */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
+/* bold */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&display=swap');
+
+/* 基本設定 */
+body {
+	color: #333;
+	font-size: 15px;
+	line-height: 1.6;
+  /* 明朝体の時 */
+	font-family: 'Noto Serif JP',"游明朝", YuMincho, "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  /* ゴシック体の時 */
+  font-family: 'Noto Sans JP', "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /* 横幅1080px以下の時はスクロールバーを表示させる */
+  min-width: 1080px;
+}
+
+/* スマホサイズの時の設定 */
+@media screen and (max-width: 768px) {
+	html {
+    /* 画面横幅に対して4%をフォントサイズに指定*/
+		font-size: 4vw;
+	}
+
+	body {
+    /* 最上位の親要素（html要素）を基準値としたサイズ */
+    /* およそ14px - 15pxになる */
+		font-size: 1rem;
+		/* 横スクロールバーは表示させないので0に設定 */
+		min-width: 0;
+	}
+}
+
+/* ボタンのCSS */
+
+.blue-button{
+	background: blue;
+	width: 150px;
+	text-align: center;
+	border-radius: 8px;
+	border: #333 2px solid;
+	margin: 10px;
+}
+.blue-button a{
+	display: block;
+	padding: 10px;
+	font-size: 14px;
+	font-family: 'Noto Serif JP', serif;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #fff;
+	text-decoration: none;
+}
+.blue-button:hover{
+	background: transparent;
+	border-color: blue;
+}
+.blue-button a:hover{
+	color:blue;
+}
